@@ -1,0 +1,111 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Div's são containers -->
+        <div class="containerheader">
+            <div class="containerLogo">
+                <img src="cafeteria-logo.png">
+            </div>
+            <div class="containerMenu">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="quemsomos.html">Quem Somos</a>
+                    <a href="cardapio.html">Cardápio</a>
+                    <a href="pedidos.html">Pedidos</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="containerBanner">
+            <img src="cafeteria-fachada.jpg">
+        </div>
+        
+    </main>
+</body>
+</html>
+
+CSS
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: rgb(27, 23, 23);
+}
+.containerheader {
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    & .containerLogo {
+        width: 40%;
+    }
+
+    & .containerLogo img {
+        width: 250px;
+    }
+
+    & .containerMenu {
+        width: 60%;  
+    }
+
+    & .containerMenu nav {
+        padding: 15px;
+    }
+
+    & .containerMenu nav a {
+        color: yellow;
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 15px;
+        text-decoration: none;
+    }
+
+    & .containerMenu nav a:hover{
+        color: yellow;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 10px;
+        background: orange;
+        border-radius: 16px;
+    }
+
+}
+
+main{
+    width: 100%;
+    align-items: center;
+
+    & .containerBanner{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+
+    & .containerBanner img:hover{
+        width: 100%;
+        transition: 2.0s;
+        border-radius: 20px;
+        box-shadow: 8px 8px 5px yellow;
+    }
+
+}
